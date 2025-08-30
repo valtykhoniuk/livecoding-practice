@@ -55,6 +55,75 @@ function isPalyndrome(str) {
   return isPalyndrome(str.slice(1, str.length - 1));
 }
 
+// 6) Відсортуй масив об’єктів за числовим полем age.
+function sortByAge(objectsArray) {
+  return objectsArray.sort((a, b) => a.age - b.age);
+}
+
+// 7) Знайди найбільший та найменший елемент масиву без використання вбудованих методів.
+function findMixMax(arr) {
+  let min = arr[0];
+  let max = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    } else if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return [min, max];
+}
+
+// 8) Напиши функцію chunk(arr, size), що розбиває масив на частини заданого розміру.
+function chunk(arr, size) {
+  let chunkedArr = [];
+  for (let i = 0; i < arr.length; i += size) {
+    chunkedArr.push(arr.slice(i, i + size));
+  }
+  return chunkedArr;
+}
+
+// 9) Реалізуй debounce або throttle функцію.
+function debounce(func, delay) {
+  let timeout;
+
+  return function (...args) {
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+
+// 9) Реалізуй debounce або throttle функцію.
+function throttle(func, limit) {
+  let inThrottle;
+
+  return function (...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+// 10) Напиши функцію, що повертає перші n чисел Фібоначчі.
+function fibonacci(n) {
+  if (n === 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  let result = [0, 1];
+  for (let i = 0; i < n; i++) {
+    result.push(result[i] + result[i + 1]);
+  }
+  return result;
+}
+
 //callstack
 console.log(unique([1, 2, 2, 3, 4, 4, 5]));
 console.log(
@@ -66,3 +135,14 @@ console.log(
 console.log(deepClone([[1, 2], 4]));
 console.log(countSymbolTimes("devopso", "o"));
 console.log(isPalyndrome("aopupoa"));
+console.log(
+  sortByAge([
+    { age: 5, name: "Bob" },
+    { age: 8, name: "Alice" },
+    { age: 9, name: "Nicole" },
+  ])
+);
+let arr = [5, 1, 3, 9, 1, 2, 5];
+console.log("Max: " + findMixMax(arr)[1] + ", min: " + findMixMax(arr)[0]);
+console.log(chunk(arr, 3));
+console.log(fibonacci(5));
