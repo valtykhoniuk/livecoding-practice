@@ -124,6 +124,55 @@ function fibonacci(n) {
   return result;
 }
 
+// 11) Підрахуй суму всіх чисел у масиві, використовуючи reduce.
+function sumNums(arr) {
+  return arr.reduce((acc, num) => {
+    return acc + num;
+  });
+}
+
+// 12) Реалізуй власну версію Promise.all через async/await.
+async function myPromiseAll(promises) {
+  const results = [];
+
+  for (let i = 0; i < promises.length; i++) {
+    const promise = Promise.resolve(promises[i]);
+
+    try {
+      results[i] = await promise;
+    } catch (error) {
+      throw error;
+    }
+  }
+  return results;
+}
+
+// 13) Напиши функцію capitalizeWords(str), що робить великою першу букву кожного слова.
+function capitalizeWords(str) {
+  return str
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+// 14) Перевір, чи два рядки є анаграмами один одного.
+function checkAnnagram(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  let lettersStr1 = str1.split("");
+  let lettersStr2 = str2.split("");
+  for (let letter of lettersStr1) {
+    const index = lettersStr2.indexOf(letter);
+    if (index !== -1) {
+      lettersStr2.splice(index, 1);
+    } else {
+      return false;
+    }
+  }
+  return lettersStr2.length === 0;
+}
+
 //callstack
 console.log(unique([1, 2, 2, 3, 4, 4, 5]));
 console.log(
@@ -146,3 +195,7 @@ let arr = [5, 1, 3, 9, 1, 2, 5];
 console.log("Max: " + findMixMax(arr)[1] + ", min: " + findMixMax(arr)[0]);
 console.log(chunk(arr, 3));
 console.log(fibonacci(5));
+console.log("Sum: " + sumNums(arr));
+let str = "the console.log() static method outputs a message to the console";
+console.log(capitalizeWords(str));
+console.log(checkAnnagram("abob", "obab"));
