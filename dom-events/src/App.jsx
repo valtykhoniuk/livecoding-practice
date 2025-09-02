@@ -8,6 +8,7 @@ import Task21 from "./components/Task21";
 import Task22 from "./components/Task22";
 import Task23 from "./components/Task23";
 import Task24 from "./components/Task24";
+import Task25 from "./components/Task25";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Task22 />
       <Task23 />
       <Task24 />
+      <Task25 />
     </>
   );
 }
