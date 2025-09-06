@@ -1,4 +1,3 @@
-import "./index.css";
 import React from "react";
 import Task16 from "./components/Task16";
 import Task17 from "./components/ Task17";

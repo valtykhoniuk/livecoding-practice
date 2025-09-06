@@ -1,0 +1,22 @@
+/* 32) Створи адаптивну карточку продукту з зображенням та текстом. */
+.task32__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.card__container {
+  width: 20%;
+  min-width: 200px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__content {
+  padding: 20px;
+}
+
+.card__content img {
+  max-width: 100%;
+  height: auto;
+}

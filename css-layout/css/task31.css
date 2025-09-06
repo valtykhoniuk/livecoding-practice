@@ -1,0 +1,12 @@
+/* 31) Центруй елемент вертикально та горизонтально за допомогою flex або grid. */
+
+.task31__container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.task31__object {
+  background-color: cadetblue;
+  padding: 10px;
+}
