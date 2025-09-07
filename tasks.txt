@@ -42,7 +42,6 @@
 36) Простий responsive navbar з бургер-меню.
 37) Grid-галерея з мінімальною шириною елемента 200px.
 38) Реалізуй dark/light mode toggle на сторінці (зміна класу body).
-39)-
 
 4️⃣ React (JSX / Components / Hooks)
 - 40) Реалізуй ToDo List: додавання та видалення задач, збереження state у компоненті.
@@ -51,11 +50,11 @@
 - 43) Передай props у дочірній компонент і відобрази дані.
 - 44) Підніми стан (lifting state up) між двома компонентами.
 - 45) Реалізуй простий select або dropdown із вибором значення.
-46) React форма з контролем input (controlled component).
-47) Toggle компонент: зміна стану true/false і відображення тексту.
-48) Fetch API + useEffect: вивести список користувачів з JSONPlaceholder.
-49) Modal компонент із props isOpen та onClose.
-50) Таблиця з сортуванням по колонках.
+- 46) React форма з контролем input (controlled component). (skip)
+- 47) Toggle компонент: зміна стану true/false і відображення тексту. (skip)
+- 48) Fetch API + useEffect: вивести список користувачів з JSONPlaceholder.
+- 49) Modal компонент із props isOpen та onClose.
+- 50) Таблиця з сортуванням по колонках.
 51) Список карточок з кнопкою “Load More” (пагінація).
 52) Реалізація simple tabs component.
 53) Theme switcher (light/dark) з Context API.
